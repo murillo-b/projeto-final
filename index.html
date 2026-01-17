@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento Web com JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">
+                <i class="ph ph-qr-code"></i>
+                <span> Codando<span class="highlight">.JS</span></span>
+                <!--soan isola um texto de outro numa mesma linha, é o que 
+                vai deixar o "Codando" com uma cor diferente do ".JS"-->
+            </div>
+            <nav class="menu">
+                <a href="#modulos">Módulos</a>
+                <a href="#cadastro" class="btn-nav">Matricule-se</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <span class="tag">Matrículas abertas até 20/02/2026</span>
+            <h1>Domine o JavaScript do ZERO.</h1>
+            <p>Aprenda a criar sistemas web completos sem depender de IA ou formações longas e teóricas. Entenda a base
+                da programação de forma imersiva e totalmente hands-on.</p>
+                <div class="hero-buttons"></div>
+                <a href="#cadastro" class="btn btn-primary">Começar agora</a>
+                <a href="#modulos" class="btn btn-outline">Explorar conteúdo</a>
+        </div>
+    </section>
+
+    <section id="modulos" class="section-pad">
+        <div class="container">
+            <h2 class="section-title"> O que você vai aprender:</h2>
+            <div class="row">
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="ph ph-desktop-tower"></i>
+                    </div>
+                    <h3>Frontend moderno</h3>
+                    <p>Crie interfaces que respondem ao
+                        usuário. Domine HTML5, CSS3 e JavaScript
+                        com manipulação de DOM.
+                    </p>
+                <div class="card"></div>
+                    <div class="icon-box"></div>
+                    <i class="ph ph-cpu"></i>
+                    <h3>Backend & APIs</h3>
+                        <p>Aprenda os principais conceitos, construa a lógica do
+                            servidor, banco de dados e regras de negócio com
+                            Node.js.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cadastro" class="section-pad bg-darker">
+        <div class="container form-wrapper">
+            <h2>Garanta a sua vaga!</h2>
+            <form id="formCadasto">
+                <div class="input-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Seu nome">
+                </div>
+                 <div class="input-group">
+                    <label for="email">Digite seu Email</label>
+                    <input type="text" id="email" placeholder="seu@email.com">
+                </div>
+                 <div class="input-group">
+                    <label for="senha">Digite a sua senha</label>
+                    <input type="text" id="senha" placeholder="Mínimo 8 caracteres">
+                
+                <ul class="validation-list">
+                    <li id="req-length" class="invalid"><i class="ph ph-square">Mínimo 8 caracteres</i></li>
+                    <li id="req-upper" class="invalid"><i class="ph ph-square"></i>Mínimo uma letra maiúscula</li>
+                    <li id="req-number" class="invalid"><i class="ph ph-square"></i>Mínimo um número</li>
+                    <li id="req-special" class="invalid"><i class="ph ph-square"></i>Mínimo um caractere especial</li>
+                </ul>
+                </div>
+                <button type="submit" id="btnSubmit" class="btn btn-full" disabled>FINALIZAR CADASTRO</button>
+            </form>
+        </div>
+        
+    </section>
+    <footer>
+        <p>&copy; 2026 CodingLabs. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
