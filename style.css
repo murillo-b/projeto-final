@@ -2,25 +2,27 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*garante que bordas e padding não aumentem o tamanho dos elementos*/
+    box-sizing: border-box; /*garante que bordas e 
+    padding não aumentem o tamanh dos elementos*/
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root{
-    /*permite mudar cor e outros atributos em todo o site 
+    /*permite mudar cor e outros atributos em todo o site
     alterando em apenas um lugar*/
-    --bg-color: #161c24; /*cor principal do plano de fundo*/
-    --text-color: #e6edf3; /*cor do texto principal*/
-    --primary-color: #2825dd;
-    --card-bg: #161b22;
-    --border-color: #30363d;
+    --bg-color: #0f0046; /*cor principal do plano de fundo*/
+    --text-color: #d3d9db; /*cor do texto principal*/
+    --primary-color: #5059ff; /*cor de destaque dos elementos*/
+    --card-bg: #263954;
+    --border-color: #2d363f;
 }
 
 body{
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /*usa variavel de cor de fundo*/
     color: var(--text-color);
     line-height: 1.6;
 }
+
 .container{
     max-width: 1000px;
     margin: 0 auto;
@@ -34,26 +36,28 @@ body{
 .navbar{
     background-color: #161b22d0;
     backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+    position: fixed; /*mantém o menu sempre visivel no topo*/
+    width: 100%; 
+    z-index: 1000;    
 }
 
+
 .navbar-content{
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}       
+}
 
 .logo{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo .highlight{color:var(--primary-color)}
+.logo .highlight { color: var(--primary-color)}
 
 .menu a{
     text-decoration: none;
@@ -66,20 +70,20 @@ body{
     border: 1px solid var(--border-color);
     padding: 8px 16px;
     border-radius: 6px;
-    transition: 0.3s;
+    transition: 0.3s
 }
 
-.btn-nav:hover{
-    border-color: var(--text-color);
+.btn-nav:hover {
+border-color: var(--text-color)
 }
 
 /*SEÇÃO HERO*/
 
 .hero{
     text-align: center;
-    padding-top: 150px;
+    padding-top: 100px;
     padding-bottom: 80px;
-    background: radial-gradient(circle at top, #1f2937 0%, #0d1117 70%);
+    background: radial-gradient(circle at top, #1e4172 0%, #170d0d 70%);
 }
 
 .tag{
@@ -88,7 +92,7 @@ body{
     color: var(--primary-color);
     padding: 5px 12px;
     border-radius: 20px;
-    font-size: 25px;
+    font-size: 8px;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -96,14 +100,13 @@ body{
 .hero h1{
     font-size: 42px;
     margin: 20px 0;
-    
 }
 
 .hero p{
     color: #8b949e;
     max-width: 600px;
-    margin: 0 auto 40px;
-    font-size: 28px;
+    margin: 0 auto 40px auto;
+    font-size: 1.2 rem;
 }
 
 .btn{
@@ -112,7 +115,7 @@ body{
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    cursor: pointer;
+    cursor:pointer;
     border: none;
     transition: 0.3s;
 }
@@ -141,7 +144,7 @@ body{
 .row{
     display: flex;
     gap: 30px;
-    margin:40px;
+    margin-top: 40px;
 }
 
 .card{
@@ -154,14 +157,87 @@ body{
 
 .icon-box{
     font-size: 32px;
-    color: var(--primary-color);
+    color:var(--primary-color);
     margin-bottom: 15px;
+}
+ 
+/*Formulário de Inscrição*/
+
+.bg-darker{background-color: #0e0d17;}
+
+.form-wrapper{
+    max-width: 500px;
+    background-color: var(--card-bg);  
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.input-group{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block; /*faz com que o label fique em cima do input*/
+    margin-bottom: 8px;
+    color: #170d0d;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    background-color: #8b949e;
+    border: 1px solid var(--border-color);
+    color: whitesmoke;
+    border-radius: 4px;
+    outline: none;
+}
+
+input:focus{
+    border-color: var(--primary-color);
+}
+
+.validation-list{
+    list-style: none;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.validation-list li{
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.invalid{
+    color: #8b949e;
+}
+
+.valid{
+    color: var(--primary-color);
+}
+
+.btn-disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.valid {
+    color: #10b981;
+}
+
+.invalid {
+    color: #ef4444;
 }
 
 footer{
     text-align: center;
     padding: 40px;
-    color: #8b949e; 
+    color: #8b949e;
     border-top: 1px solid var(--border-color);
-
+    background-color: #1e4172;
 }
+
